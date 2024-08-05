@@ -12,7 +12,9 @@
   <aside>
     <ul>
       {#each data.posts as post}
-        <li class:active={$page.route.id?.slice(7) === post.url}><a href={`/blogg/${post.url}`}>{post.metadata.title}</a></li>
+        <li class:active={$page.route.id?.slice(7) === post.url}>
+          <a href={`/blogg/${post.url}`}>{post.metadata.title}</a>
+        </li>
       {/each}
     </ul>
   </aside>
